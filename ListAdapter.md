@@ -15,4 +15,5 @@ areItemsTheSame으로 비교대상인 두 아이템이 같은 객체인지 확�
 
 ### ListAdapter
 ListAdapter는 AsyncListDiffer를 더 편하게 사용하도록 랩핑한 클래스로, 리사이클러뷰 어댑터를 만들 때 ListAdatper를 상속하면 됩니다.<br>
-ListAdapter로 구현하면 데이터가 어떻게 바뀌든 간에 submitList() 로 전체 리스트를 넘겨주기만 하면, 어댑터가 알아서 백그라운드 스레드에서 리스트 차이를 계산하여 화면을 갱신해줍니다.<br>
+ListAdapter로 구현하면 데이터가 어떻게 바뀌든 간에 submitList() 로 전체 리스트를 넘겨주기만 하면, 어댑터가 자동으로 백그라운드 스레드에서, 이전 데이터와 새로운 데이터의 차이를 계산하여 화면을 갱신해줍니다.<br>
+이를 통해 RecyclerView의 업데이트와 화면 갱신이 효율적으로 이루어집니다.<br>
