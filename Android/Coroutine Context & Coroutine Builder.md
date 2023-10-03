@@ -17,3 +17,9 @@ Deferred는 결과값을 가지는 Job이기 때문에 Deferred는 Job이 가지
 
 ### CoroutineExceptionHandler
 마지막으로 CoroutineExcpetionHandler는 코루틴에서 예외 처리하는 데 사용되는 인터페이스로, 이를 구현하여 예외 처리를 할 수 있습니다.
+
+<br>
+
+# Coroutine Builder
+코루틴 빌더는 코루틴을 시작하고 관리하는 데 사용되는 여러가지 함수를 의미합니다.<br>
+Job 객체를 반환하는 launch(), Deferred 객체를 반환하는 async(), Dispatcher를 스위칭하기 위한 withContext() 등이 있습니다.
