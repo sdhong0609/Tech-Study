@@ -1,5 +1,16 @@
-# Coroutine Context
-Coroutine Context는 코루틴이 실행될 때 사용되는 실행 환경을 정의하는 요소입니다.<br>
+# 코루틴 스코프 (Coroutine Scope)
+코루틴 스코프는 코루틴이 동작하는 범위를 규정합니다.
+* Global Scope는 애플리케이션의 생명주기와 연결되어 있고 최상위 레벨에서 코루틴을 시작할 때 사용합니다.
+* 그리고 lifecycleScope와 viewModelScope가 있는데 안드로이드에서 제공하는 특수한 코루틴 스코프입니다.
+* lifecycleScope는 액티비티 혹은 프래그먼트의 생명주기와 연결되어 있어서, 예를 들어 액티비티가 파괴되면 스코프가 취소됩니다.
+* viewModelScope는 Viewmodel과 연결된 코루틴 스코프로, ViewModel의 onCleared() 함수가 호출되면 스코프가 취소됩니다.
+* lifecycleScope와 viewModelScope는 실행 순서를 보장해주는 Dispatchers.Main.immediate에 바인딩 되어 있습니다.
+* 또한 CoroutineScope() 함수로 지정된 코루틴 컨텍스트를 감싸는 코루틴 스코프를 직접 생성할 수도 있습니다.
+
+<br>
+
+# 코루틴 컨텍스트 (Coroutine Context)
+코루틴 컨텍스트는 코루틴이 실행될 때 사용되는 실행 환경을 정의하는 요소입니다.<br>
 코루틴 컨텍스트의 구성 요소들로는 Dispatchers, Job, CoroutineExceptionHandler 등이 있습니다.
 
 ### Dispatchers
@@ -20,6 +31,6 @@ Deferred는 결과값을 가지는 Job이기 때문에 Deferred는 Job이 가지
 
 <br>
 
-# Coroutine Builder
+# 코루틴 빌더 (Coroutine Builder)
 코루틴 빌더는 코루틴을 시작하고 관리하는 데 사용되는 여러가지 함수를 의미합니다.<br>
 Job 객체를 반환하는 launch(), Deferred 객체를 반환하는 async(), Dispatcher를 스위칭하기 위한 withContext() 등이 있습니다.
