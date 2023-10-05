@@ -8,14 +8,25 @@
 ![image](https://github.com/sdhong0609/tech-interview-study/assets/78577085/90485713-550c-4013-97e4-a806aa9168ab)
 
 <br>
-<br>
 
 ![image](https://github.com/sdhong0609/tech-interview-study/assets/78577085/ddd14c65-b6d5-4f28-80cb-225aa4ede6a5)
 
-<br>
 <br>
 
 ### Continuation
 Continuation은 프로그램의 제어 상태를 추상적으로 표현한 것입니다.<br>
 코루틴에서 Continuation은 코루틴이 중단된 지점의 실행 상태와 나중에 해당 지점에서 코드를 재개할 수 있는 정보를 저장하는데 사용됩니다.<br>
-(* 코루틴 내부 동작 원리 참고 영상 : https://youtu.be/usaD7HyN598?si=LP5VVVJTlcKm7S9K&t=1420 - 23:40부터)
+
+### CPS (Continuation Passing Style)
+CPS란 continuation passing style의 약자로 subroutine에서 caller로 return하는 것이 아닌, continuation을 받아서 subroutine의 작업값을 continuation으로 passing하는 프로그래밍 방법을 의미합니다.<br>
+코루틴에서는 이러한 CPS로 각 subroutine들을 제어합니다. subroutine은 caller의 context로 돌아가는 대신 정의된 continuation에 의해 제어되게 됩니다.
+
+### 코루틴 내부 동작 원리
+내부적으로 코드를 decompile 해보면, JVM 상에서 suspend 키워드는 빠져있고 continuation 파라미터가 추가됩니다.<br>
+그리고 switch-case 문으로 label 변수를 설정하여 제어합니다.<br>
+초기 label은 0이므로 case가 0인 경우의 코드를 실행하고, state machine에는 label을 1로 변경하고 현재의 상태값들을 저장한 다음, continuation으로 state machine을 넘겨줍니다.<br>
+그리고 코드를 재개할 때, continuation으로 넘겨받은 state machine에 저장된 상태값을 기반으로 코드를 다시 재개합니다.<br>
+이 때 label이 1인 상태이기 때문에 case가 1인 경우의 코드를 실행합니다.<br>
+코루틴 내부적으로 이러한 방식을 통해 중단과 재개를 반복하며 동작합니다.<br>
+(* 코루틴 내부 동작 원리 참고 영상 : https://youtu.be/usaD7HyN598?si=LP5VVVJTlcKm7S9K&t=1420 - 23:40부터)<br>
+(* 참고 사이트 : https://tech.wonderwall.kr/articles/CoroutineDeepDive/)
