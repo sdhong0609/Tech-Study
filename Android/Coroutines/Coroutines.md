@@ -11,3 +11,11 @@
 <br>
 
 ![image](https://github.com/sdhong0609/tech-interview-study/assets/78577085/ddd14c65-b6d5-4f28-80cb-225aa4ede6a5)
+
+<br>
+<br>
+
+### Continuation
+Continuation은 프로그램의 제어 상태를 추상적으로 표현한 것입니다.<br>
+코루틴에서 Continuation은 코루틴이 중단된 지점의 실행 상태와 나중에 해당 지점에서 코드를 재개할 수 있는 정보를 저장하는데 사용됩니다.<br>
+(* 코루틴 내부 동작 원리 참고 영상 : https://youtu.be/usaD7HyN598?si=LP5VVVJTlcKm7S9K&t=1420 - 23:40부터)
