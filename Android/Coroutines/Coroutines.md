@@ -28,4 +28,6 @@ Continuation은 프로그램의 제어 상태를 추상적으로 표현한 것�
 코루틴에서 Continuation은 코루틴이 중단된 지점의 실행 상태와, 나중에 해당 지점에서 코드를 재개할 수 있는 정보를 저장하는데 사용됩니다.<br>
 
 ### CPS (Continuation Passing Style)
-CPS란 Continuation Passing Style의 약자로, 호출되는 함수에 Continuation을 전달하고, 각 함수의 작업이 완료되는 대로 전달받은 Continuation을 호출하는 방식을 의미합니다. 이러한 의미에서 Continuation을 일종의 콜백으로 생각할 수 있습니다.
+CPS란 Continuation Passing Style의 약자로, 호출되는 함수에 Continuation을 전달하고, 함수의 작업이 완료되는 대로 전달받은 Continuation을 호출하는 방식을 의미합니다. 이러한 의미에서 Continuation을 일종의 콜백으로 생각할 수 있습니다.<br>
+("호출되는 함수에 Continuation을 전달하고" -> 코드상에서 continuation 파라미터가 추가된 것을 의미)<br>
+("함수의 작업이 완료되는 대로 전달받은 Continuation을 호출하는 방식" -> 코드상에서 예를 들어 case가 0인 경우의 코드를 실행하고 완료하면, Continuation을 호출하여 상태값들이 저장된 state machine을 넘겨주는 것을 의미)
