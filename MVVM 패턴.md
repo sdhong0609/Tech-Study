@@ -13,9 +13,9 @@ MVVM 패턴은 구성 요소를 엄격하게 분리하여, 유지 보수가 용�
 ### MVVM 패턴의 흐름
 MVVM 패턴의 흐름은 이와 같습니다.<br>
 1. 먼저 View로 사용자의 입력이 들어오면, View는 해당 이벤트를 ViewModel로 전달합니다.
-2. ViewModel이 해당 이벤트에 대한 데이터를 Model에 요청하고, Model은 로컬 또는 서버에서 데이터를 가져와서 업데이트한 후, ViewModel에 데이터가 변경되었음을 알립니다.
+2. ViewModel이 해당 이벤트에 대한 데이터를 Model에 요청하고, Model은 로컬 또는 서버에서 데이터를 가져와서 업데이트한 후, ViewModel로 데이터를 전달합니다.
 3. ViewModel은 변경된 데이터를 가공하여 저장하고, View는 데이터바인딩을 통해 ViewModel을 관찰하고 있다가, 변화가 감지되면 자동으로 화면을 갱신합니다.<br>
-(* 참고: 2번 관련해서, 안드로이드에서는 데이터가 변경되었음을 알리는 과정을 주로 LiveData를 이용하여 구현합니다. LiveData는 생명 주기를 고려하여 데이터 변경을 관찰하고, 데이터가 변경될 때마다 Observer 객체(예: ViewModel)에 알려줍니다. ViewModel에서 Model의 데이터를 LiveData 객체로 래핑하여 데이터 변경 시 ViewModel이 변경사항을 알 수 있게 합니다.)
+(* 참고: 2번 관련해서, 안드로이드에서는 데이터를 전달하는 과정을 return 값으로 데이터를 전달해준다. 예시로 People-Inside 프로젝트에서 service(api) interface에 있는 suspend 함수의 return 값들이 있다.)
 <br>
 <br>
 <br>
