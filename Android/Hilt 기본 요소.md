@@ -6,5 +6,5 @@ Module에서 제공받은 의존성 객체를 조합하여 필요한 곳에 주�
 Module은 의존성 객체들을 모아놓은 공간으로 Component에 의존성 객체를 제공하는 역할을 합니다.
 
 ### Provider (이것도 기본 요소인지는 아직 의문)
-Provider 메서드는 Module 내에 정의되며, 해당 Module이 Component에 제공할 객체를 생성하고 제공하는 역할을 합니다.
+Provider 메서드는 Module 내에 정의되며, 해당 Module이 Component에 제공할 객체를 생성하고 제공하는 역할을 합니다.<br>
 (* 참고 : https://kotlinworld.tistory.com/63)
