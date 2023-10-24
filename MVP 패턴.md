@@ -19,10 +19,4 @@ MVP 패턴의 흐름은 이렇습니다.
 <br>
 <br>
 
-![image](https://github.com/sdhong0609/tech-interview-study/assets/78577085/0166347e-e786-4eb3-8f1a-d707785abe5d)
-
-<br>
-<br>
-<br>
-
-![image](https://github.com/sdhong0609/tech-interview-study/assets/78577085/435bab1a-f862-47d6-a4f8-2e0172423b96)
+![image](https://github.com/sdhong0609/Tech-Study/assets/78577085/1f7b34c2-680a-4d16-983f-13919df9c9d5)
