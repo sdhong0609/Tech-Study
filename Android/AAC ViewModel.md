@@ -8,6 +8,6 @@
 그래서 전달된 객체의 라이프사이클이 끝날 때까지, 즉 액티비티는 finish될 때까지 그리고 프래그먼트는 detach될 때까지, 뷰모델 인스턴스가 메모리에 남아 있게 되어, 화면의 데이터가 유지되는 것입니다.<br>
 그리고 액티비티 혹은 프래그먼트가 더이상 사용되지 않는 상태가 되었을 때 (액티비티는 onDestroy() 이후, 프래그먼트는 onDetach() 이후), 뷰모델에서는 onCleared() 메서드를 통해, 내부 데이터(리소스) 초기화를 수행하여 데이터를 파괴합니다.
 
-![image](https://github.com/sdhong0609/tech-interview-study/assets/78577085/62b68275-cff9-4129-a866-61dd536ec0a6)
+![image](https://github.com/sdhong0609/Tech-Study/assets/78577085/fe594901-11b2-4fb5-b8a0-632869e2a0f5)
 
 
