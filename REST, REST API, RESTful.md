@@ -7,4 +7,4 @@ REST API란 이러한 REST의 원리를 따르는 API를 의미합니다.<br>
 HTTP 프로토콜의 인프라를 그대로 사용하므로, REST API 사용을 위한 별도의 인프라를 구축할 필요가 없고, HTTP 표준 프로토콜을 따르는 모든 플랫폼에서 사용이 가능합니다.
 
 # RESTful
-그리고 RESTful이란 REST의 원리를 잘 따르는 시스템을 의미하며, REST API의 설계 규칙을 올바르게 지킨 시스템을 RESTful하다고 말할 수 있습니다.
+그리고 RESTful이란 REST의 원리를 잘 따라서, REST API의 설계 규칙을 올바르게 지킨 시스템을 RESTful하다고 말할 수 있습니다.
