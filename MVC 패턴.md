@@ -14,7 +14,7 @@ MVC 패턴의 장점으로는 Model이 View와 Controller에 묶여있지 않아
 ### MVC 패턴의 흐름
 통상적인 MVC 패턴의 흐름은 이렇습니다.
 1. 사용자 입력이 Controller에 전달되면,
-2. Controller는 사용자 입력에 해당하는 Model을 업데이트합니다.
+2. Controller는 사용자 입력에 해당하는 Model에 업데이트를 요청합니다.
 3. Controller는 업데이트한 Model을 반영할 View를 선택하고, (Controller와 View는 1:n 관계로 하나의 Controller가 여러개의 View를 관리 가능)
 4. View는 Model로부터 데이터를 가져와 화면을 업데이트합니다.
 
